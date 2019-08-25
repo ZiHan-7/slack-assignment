@@ -1,0 +1,12 @@
+<div class="messages">
+    <h3>{{user.name}}</h3>
+    <hr />
+    <p *ngFor="let message of user.messages">{{message}}</p>
+</div>
+<div class="form">
+    <input type="text" [formControl]="messageInput" placeholder="Message" maxlength="255">
+    <button (click)="onSend()">Send</button>
+    <!-- <div *ngIf="messageInput.errors.maxlength">
+        The characters typed cannot be exceeding 255 characters.
+    </div> -->
+</div>

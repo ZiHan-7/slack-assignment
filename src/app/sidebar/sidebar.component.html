@@ -1,0 +1,5 @@
+<h3>Users</h3>
+<hr />
+<div *ngFor="let user of users; let i = index" (click)="updateSelectedUser(i)">
+    <p>{{user.name}} ({{user.messages.length}})</p>
+</div>
